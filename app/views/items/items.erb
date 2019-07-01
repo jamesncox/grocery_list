@@ -1,0 +1,17 @@
+<h1>Welcome, <%= current_user.username %> </h1>
+<h3>View everyone's grocery lists.</h3>
+<br>
+<% @items.each do |item| %>
+  <label>User: </label><%= item.user.username %><br>
+  <label>Produce: </label><%= item.produce %><br>
+  <label>Meat: </label><%= item.meat %><br>
+  <label>Fish: </label><%= item.fish %><br>
+  <label>Grains: </label><%= item.grain %><br>
+  <label>Dairy: </label><%= item.dairy %><br>
+  <label>Snacks: </label><%= item.snacks %><br>
+  <label>Spices: </label><%= item.spices %><br>
+  <label>Staples: </label><%= item.staples %><br>
+  <label>Frozen: </label><%= item.frozen %><br>
+  <br>
+  <br>
+<% end %>

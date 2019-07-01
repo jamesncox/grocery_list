@@ -5,7 +5,7 @@ class ItemsController < ApplicationController
             @items = Item.all
             erb :'items/items'
         else
-            edirect to '/login'
+            redirect to '/login'
         end
     end 
 
@@ -82,5 +82,5 @@ class ItemsController < ApplicationController
             redirect to 'login'
         end
     end 
-    
+
 end 
