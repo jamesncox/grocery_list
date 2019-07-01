@@ -1,0 +1,12 @@
+<%if logged_in?%>
+  <a href="/users/<%=current_user.slug%>">My Grocery List</a>
+  <br>
+  <a href="/items/new">New Grocery List</a>
+  <br>
+  <a href="/items">Everyone's Grocery Lists</a>
+  <br>
+  <a href="/logout">Logout?</a>
+<%else%>
+  <a href="/signup">Signup</a> or <a href="/login">Login</a>
+  <br>
+<%end%>
