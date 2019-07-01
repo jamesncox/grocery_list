@@ -1,9 +1,9 @@
 <%if logged_in?%>
-  <a href="/users/<%=current_user.slug%>">My Grocery List</a>
+  <a href="/users/<%=current_user.slug%>">My Grocery Lists</a>
   <br>
   <a href="/items/new">New Grocery List</a>
   <br>
-  <a href="/items">Everyone's Grocery Lists</a>
+  <a href="/items">View All Users' Grocery Lists</a>
   <br>
   <a href="/logout">Logout?</a>
 <%else%>
