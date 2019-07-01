@@ -11,3 +11,5 @@ class User < ActiveRecord::Base
             user.slug == slug.downcase
         end
     end 
+
+end
