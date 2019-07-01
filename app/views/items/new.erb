@@ -1,0 +1,31 @@
+<h1>Create A New Grocery List, <%= current_user.username %>!</h1>
+
+<% if logged_in? %>
+
+  <form action='/items' method="post">
+    Produce:
+    <input type="text" name="produce"><br>
+    Meat:
+    <input type="text" name="meat"><br>
+    Fish:
+    <input type="text" name="fish"><br>
+    Grains:
+    <input type="text" name="grains"><br>
+    Dairy:
+    <input type="text" name="dairy"><br>
+    Snacks:
+    <input type="text" name="snacks"><br>
+    Spices:
+    <input type="text" name="spices"><br>
+    Staples:
+    <input type="text" name="staples"><br>
+    Frozen:
+    <input type="text" name="frozen"><br>
+
+    <input type="submit" name="submit" id="submit">
+
+  </form>
+
+<% else %>
+  <h1> You must be logged in to update your grocery list. </h1>
+<% end %>
