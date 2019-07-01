@@ -2,6 +2,7 @@
 <br>
 <% if @user.items.length > 0 %>
     <% @user.items.each do |item| %>
+        <label>Shopping Day: </label><%= item.shopping_day %><br>
         <label>Produce: </label><%= item.produce %><br>
         <label>Meat: </label><%= item.meat %><br>
         <label>Fish: </label><%= item.fish %><br>
