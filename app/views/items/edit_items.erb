@@ -25,14 +25,14 @@
   <input type="text" name="staples" value="<%= @item.staples %>"><br>
   <label>Freezer: </label>
   <input type="text" name="freezer" value="<%= @item.freezer %>"><br>
-
-  <input type="submit" value="Edit Grocery List">
+  <br>
+  <input type="submit" value="Update Grocery List">
 </form><br>
 
 <br>
 
 <form action="/items/<%=@item.id%>/delete" method="post">
-  <label>Delete?</label><br/>
+  <label>Delete your list?</label><br/>
   <input type="hidden" name="_method" value="delete">
   <input type="submit" value="Delete">
 </form>
