@@ -2,4 +2,8 @@
 
 <h2>You can create and manager a grocery list here!</h2>
 
+<%if !logged_in?%>
 <h3>Sign Up or Login Below</h3>
+<%else%>
+<h3>Click one of the links below to get started</h3>
+<%end%>

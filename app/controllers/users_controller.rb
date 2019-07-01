@@ -33,7 +33,7 @@ class UsersController < ApplicationController
           session[:user_id] = @user.id 
           redirect to '/items'
         else 
-          redirect to '/login'
+          erb :index
         end 
       end
       
@@ -45,9 +45,9 @@ class UsersController < ApplicationController
       get '/logout' do
         if logged_in?
           session.destroy
-          redirect to '/login' 
+          erb :index
         else 
-          redirect to '/login'
+          erb :index
         end 
       end 
 
