@@ -20,7 +20,7 @@ class ItemsController < ApplicationController
     post '/items' do
         if logged_in?
             if params[:team_name] != "" 
-                @item = Item.new(produce: params[:produce], meat: params[:meat], fish: params[:fish], grains: params[:grains], dairy: params[:dairy], snacks: params[:snacks], spices: params[:spices], staples: params[:stapes], frozen: params[:frozen])
+                @item = Item.new(produce: params[:produce], meat: params[:meat], fish: params[:fish], grains: params[:grains], dairy: params[:dairy], snacks: params[:snacks], spices: params[:spices], staples: params[:stapes], freezer: params[:freezer])
                 @item.user = current_user
                 @item.save
                 redirect to "/items/#{@item.id}"
@@ -58,7 +58,7 @@ class ItemsController < ApplicationController
         if logged_in?
             @item = Item.find_by_id(params[:id])
                 if params[:produce] != "" 
-                    @team_stat.update(produce: params[:produce], meat: params[:meat], fish: params[:fish], grains: params[:grains], dairy: params[:dairy], snacks: params[:snacks], spices: params[:spices], staples: params[:stapes], frozen: params[:frozen])
+                    @team_stat.update(produce: params[:produce], meat: params[:meat], fish: params[:fish], grains: params[:grains], dairy: params[:dairy], snacks: params[:snacks], spices: params[:spices], staples: params[:stapes], freezer: params[:freezer])
                     erb :"team_stats/show_team_stats" 
                     redirect to "/users/#{current_user.slug}" 
                 else 
