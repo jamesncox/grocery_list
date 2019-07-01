@@ -1,0 +1,36 @@
+<h1>Edit Your List</h1>
+
+<h4>Edit or delete your grocery list.</h4><br>
+
+<form action="/items/<%=@item.id%>" method="post">
+  <input type="hidden" name="_method" value="patch">
+
+  <label>Produce: </label>
+  <input type="text" name="produce" value="<%= @item.produce %>"><br>
+  <label>Meat: </label>
+  <input type="text" name="meat" value="<%= @item.meat %>"><br>
+  <label>Fish: </label>
+  <input type="text" name="fish" value="<%= @item.fish %>"><br>
+  <label>Grains: </label>
+  <input type="text" name="grains" value="<%= @item.grains %>"><br>
+  <label>Dairy: </label>
+  <input type="text" name="dairy" value="<%= @item.dairy %>"><br>
+  <label>Snacks: </label>
+  <input type="text" name="snacks" value="<%= @item.snacks %>"><br>
+  <label>Spices: </label>
+  <input type="text" name="spices" value="<%= @item.spices %>"><br>
+  <label>Staples: </label>
+  <input type="text" name="staples" value="<%= @item.staples %>"><br>
+  <label>Freezer: </label>
+  <input type="text" name="freezer" value="<%= @item.freezer %>"><br>
+
+  <input type="submit" value="Edit Grocery List">
+</form><br>
+
+<br>
+
+<form action="/items/<%=@item.id%>/delete" method="post">
+  <label>Delete?</label><br/>
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete">
+</form>
