@@ -1,0 +1,21 @@
+<h1>New Grocery List</h1>
+
+<h3>You can view, edit or delete your new grocery list here.</h3><br>
+
+<label>Produce: </label><%= @item.produce %><br>
+<label>Meat: </label><%= @item.meat %><br>
+<label>Fish: </label><%= @item.fish %><br>
+<label>Grains: </label><%= @item.grains %><br>
+<label>Dairy: </label><%= @item.dairy %><br>
+<label>Snacks: </label><%= @item.snacks %><br>
+<label>Spices: </label><%= @item.spices %><br>
+<label>Staples: </label><%= @item.staples %><br>
+<label>Freezer: </label><%= @item.freezer %><br>
+<br>
+<a href="/items/<%=@item.id%>/edit">Edit</a><br/>
+<br>
+<form action="/items/<%=@item.id%>/delete" method="post">
+  <label>Delete?</label><br/>
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete">
+</form>
