@@ -58,8 +58,8 @@ class ItemsController < ApplicationController
         if logged_in?
             @item = Item.find_by_id(params[:id])
                 if params[:produce] != "" 
-                    @team_stat.update(produce: params[:produce], meat: params[:meat], fish: params[:fish], grains: params[:grains], dairy: params[:dairy], snacks: params[:snacks], spices: params[:spices], staples: params[:stapes], freezer: params[:freezer])
-                    erb :"team_stats/show_team_stats" 
+                    @item.update(produce: params[:produce], meat: params[:meat], fish: params[:fish], grains: params[:grains], dairy: params[:dairy], snacks: params[:snacks], spices: params[:spices], staples: params[:stapes], freezer: params[:freezer])
+                    erb :"items/show_items" 
                     redirect to "/users/#{current_user.slug}" 
                 else 
                     redirect to "/users/#{current_user.slug}" 

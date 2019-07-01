@@ -1,0 +1,23 @@
+<h1><%= current_user.username %>'s Grocery Lists</h1>
+<br>
+<% if @user.items.length > 0 %>
+    <% @user.items.each do |item| %>
+        <label>Produce: </label><%= item.produce %><br>
+        <label>Meat: </label><%= item.meat %><br>
+        <label>Fish: </label><%= item.fish %><br>
+        <label>Grains: </label><%= item.grains %><br>
+        <label>Dairy: </label><%= item.dairy %><br>
+        <label>Snacks: </label><%= item.snacks %><br>
+        <label>Spices: </label><%= item.spices %><br>
+        <label>Staples: </label><%= item.staples %><br>
+        <label>Freezer: </label><%= item.freezer %><br>
+        <a href="/items/<%=item.id%>/edit"> Edit </a><br/>
+        <br>
+        <br>
+    <% end %>
+<%else %>
+    <h3>You have not created any grocery lists yet.</h3>
+    <br>
+    <a href="/items/new">Create A Grocery List</a>
+<% end %>
+
