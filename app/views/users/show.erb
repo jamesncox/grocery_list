@@ -2,7 +2,9 @@
 <br>
 <% if @user.items.length > 0 %>
     <% @user.items.each do |item| %>
-        <label>Shopping Day: </label><%= item.shopping_day %><br>
+        <strong>Shopping Day: </strong><%= item.shopping_day %><br>
+        <br>
+        <p class="outset">
         <label>Produce: </label><%= item.produce %><br>
         <label>Meat: </label><%= item.meat %><br>
         <label>Fish: </label><%= item.fish %><br>
@@ -12,6 +14,7 @@
         <label>Spices: </label><%= item.spices %><br>
         <label>Staples: </label><%= item.staples %><br>
         <label>Freezer: </label><%= item.freezer %><br>
+        </p>
         <a href="/items/<%=item.id%>/edit"> Edit <%=item.shopping_day%>'s List</a><br/>
         <br>
         <br>
