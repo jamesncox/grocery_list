@@ -1,8 +1,10 @@
 <h1>New Grocery List</h1>
 
-<h3>You can view, edit or delete your new grocery list here.</h3><br>
+<h4>View, edit or delete your new list:</h4><br>
 
 <label>Shopping Day: </label><%= @item.shopping_day %><br>
+<br>
+<p class="outset">
 <label>Produce: </label><%= @item.produce %><br>
 <label>Meat: </label><%= @item.meat %><br>
 <label>Fish: </label><%= @item.fish %><br>
@@ -12,6 +14,7 @@
 <label>Spices: </label><%= @item.spices %><br>
 <label>Staples: </label><%= @item.staples %><br>
 <label>Freezer: </label><%= @item.freezer %><br>
+</p>
 <br>
 <a href="/items/<%=@item.id%>/edit">Edit</a><br/>
 <br>

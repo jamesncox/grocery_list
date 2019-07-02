@@ -4,6 +4,8 @@
 <% @items.each do |item| %>
   <label>User: </label><%= item.user.username %><br>
   <label>Shopping Day: </label><%= item.shopping_day%><br>
+  <br>
+  <p class="outset">
   <label>Produce: </label><%= item.produce %><br>
   <label>Meat: </label><%= item.meat %><br>
   <label>Fish: </label><%= item.fish %><br>
@@ -13,6 +15,7 @@
   <label>Spices: </label><%= item.spices %><br>
   <label>Staples: </label><%= item.staples %><br>
   <label>Freezer: </label><%= item.freezer %><br>
+  </p>
   <br>
   <br>
 <% end %>
