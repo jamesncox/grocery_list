@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-
+    
     get '/items' do 
         if logged_in?
             @items = Item.all
