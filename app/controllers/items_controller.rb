@@ -19,7 +19,7 @@ class ItemsController < ApplicationController
 
     post '/items' do
         if logged_in?
-            if params[:team_name] != "" 
+            if params[:shopping_day] != "" 
                 @item = Item.new(shopping_day: params[:shopping_day], produce: params[:produce], meat: params[:meat], fish: params[:fish], grains: params[:grains], dairy: params[:dairy], snacks: params[:snacks], spices: params[:spices], staples: params[:staples], freezer: params[:freezer])
                 @item.user = current_user
                 @item.save
